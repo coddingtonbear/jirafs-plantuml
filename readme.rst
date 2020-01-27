@@ -1,13 +1,25 @@
-Jirafs-PlantUML
-===============
+Jirafs plantuml Macro
+=====================
 
 Automatically generate and include PlantUML diagrams in your Jira
 comments or description updates.
 
-Use
----
+This Jirafs plugin adds a macro allowing you to easily embed charts genearted from PlantUML's easy-to-use markup.
 
-You can enter a digraph into your document by using the ``plantuml`` macro::
+.. image:: http://coddingtonbear-public.s3.amazonaws.com/github/jirafs-plantuml/demo_v1.gif
+
+and the comment posted will appear in Jira as:
+
+.. image:: http://coddingtonbear-public.s3.amazonaws.com/github/jirafs-plantuml/demo_v1_jira.png
+
+Quickstart
+----------
+
+Before getting started, you need to set the path to your ``plantuml.jar`` file::
+
+   jirafs config --global --set plantuml.bin /path/to/plantuml.jar
+
+Then, you can enter a digraph into your document by using the ``plantuml`` macro::
 
    <jirafs:plantuml>
       @startuml
